@@ -28,13 +28,13 @@ export default class MyComponent extends Component {
           <Modal
               visible={this.state.modalVisible}
               animationType={'slide'}
-              onRequestClose={() => this.closeModal()}
+              onRequestClose={this.closeModal}
           >
             <View style={styles.modalContainer}>
               <View style={styles.innerContainer}>
                 <Text>This is content inside of modal component</Text>
                 <Button
-                    onPress={() => this.closeModal()}
+                    onPress={this.closeModal}
                     title="Close modal"
                 >
                 </Button>
@@ -42,7 +42,7 @@ export default class MyComponent extends Component {
             </View>
           </Modal>
           <Button
-              onPress={() => this.openModal()}
+              onPress={this.openModal}
               title="Open modal"
           />
         </View>
